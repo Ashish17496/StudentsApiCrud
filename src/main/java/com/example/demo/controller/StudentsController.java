@@ -61,7 +61,7 @@ public class StudentsController {
 		
 	}
 	
-	@PutMapping("/studentsread/{id}")
+	@PutMapping("/studentsupdate/{id}")
 	public String updateStudentsById(@PathVariable long id,@RequestBody Students students) {
 		Optional<Students> stu=studentsRepository.findById((int) id);
 		if(stu.isPresent()) {
